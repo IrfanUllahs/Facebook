@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  font-family: "Helvetica", "Arial", sans-serif;
+  background-color: #f0f2f5;
+}
+/* Ensure you import this CSS file in your main JavaScript/TypeScript file if it's not already */
+.sidebar-content {
+  scrollbar-width: none; /* For Firefox */
+}
+
+.sidebar-content::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.sidebar-content:hover {
+  scrollbar-width: auto;
+  /* For Firefox */
+}
+
+.sidebar-content:hover::-webkit-scrollbar {
+  width: 8px; /* Show scrollbar */
+  height: 8px;
+}
+
+.sidebar-content::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
