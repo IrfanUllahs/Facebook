@@ -7,6 +7,7 @@ import { BsShop } from "react-icons/bs";
 import { RxVideo } from "react-icons/rx";
 import CreatePost from "../components/CreatePost";
 import Post from "../components/Post";
+import SwiperSlider from "../components/swiperjs/Swiper";
 const LeftSideBarDataOne = [
   {
     icon: "https://scontent.fisb4-1.fna.fbcdn.net/v/t39.30808-1/271209995_1526631444402584_8635796192478585454_n.jpg?stp=c0.7.40.40a_cp0_dst-jpg_p40x40&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFBXFxsbsGYBClHF2p1eyO1wLBVGPNdrcnAsFUY812tyZ4i1QhiCGcn9dGphuyk6pnszdvqUwYocukOxcwyahcq&_nc_ohc=Lx53n2UofIcQ7kNvgEir2HV&_nc_ht=scontent.fisb4-1.fna&oh=00_AYA5iTgwB269JPwNMYsah25Ir9UuNSEk1wRTyAZPdhLHhg&oe=6679FB12",
@@ -202,7 +203,7 @@ function Home() {
   return (
     <div className=" flex flex-1    overflow-hidden sidebar-content ">
       {/* left side contents are here */}
-      <div className=" flex-1 md:block hidden pt-4 pl-3 overflow-y-auto sidebar-content ">
+      <div className=" flex-1 hidden pt-4 pl-3 overflow-y-auto sidebar-content lg:block  ">
         {LeftSideBarDataOne.map((data) => (
           <LeftSideBar
             icon={data.icon}
@@ -221,8 +222,9 @@ function Home() {
         ))}
       </div>
       {/* this is the middle, and main contents lies here */}
-      <div className=" flex-[3] overflow-hidden  overflow-y-auto sidebar-content pb-4 ">
-        <div className="max-w-[60%] mx-auto   ">
+      <div className=" md:flex-[3] overflow-hidden  overflow-y-auto sidebar-content pb-4 mt-10 ">
+        <SwiperSlider data={postsData} />
+        <div className="lg:max-w-[60%] sm:max-w-[80%] mx-auto   ">
           <CreatePost />
           {postsData.map((data) => (
             <Post
@@ -237,7 +239,7 @@ function Home() {
         </div>
       </div>
       {/* right side contents are here */}
-      <div className=" flex-1 md:block hidden pt-4 pl-3 overflow-y-auto sidebar-content mr-2 ">
+      <div className=" md:flex-1 md:block hidden pt-4 pl-3 overflow-y-auto sidebar-content mr-2 ">
         <span className="text-gray-500 font-semibold ml-3 ">Your Contacts</span>
         {RightSideBarDataOne.map((data) => (
           <LeftSideBar

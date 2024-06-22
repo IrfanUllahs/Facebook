@@ -28,7 +28,7 @@ function Navbar() {
         </form>
       </div>
       {/* navigation links */}
-      <div className="flex items-center text-3xl h-full py-1 text-gray-600 w-full flex-[2] justify-between px-5 ">
+      <div className=" items-center text-3xl h-full py-1 text-gray-600 w-full flex-[2] justify-between px-5 sm:flex hidden ">
         <Link
           to={"/"}
           className={`h-full w-[17%] flex items-center justify-center  ${
